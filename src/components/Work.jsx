@@ -21,31 +21,31 @@ const works = [
     imgSrc: '/images/projects/velor.png',
     title: "Vel'or",
     tags: ['API', 'SPA', 'Maps'],
-    projectLink: ''
+    projectLink: 'https://github.com/BaKouN/Projet3_OPC'
   },
   {
     imgSrc: '/images/projects/escape.png',
     title: "Online Escape Room",
     tags: ['GSAP', 'Creative Dev'],
-    projectLink: ''
+    projectLink: 'https://github.com/BaKouN/Louis-25-birthday'
   },
   {
     imgSrc: '/images/projects/opc.png',
     title: 'Blog PHP',
     tags: ['PHP', 'MVC', 'Projet Etudiant'],
-    projectLink: ''
+    projectLink: 'https://github.com/BaKouN/Projet4_OPC'
   },
   {
     imgSrc: '/images/projects/portfolio.png',
     title: 'Portfolio',
     tags: ['React', 'Tailwind'],
-    projectLink: ''
+    projectLink: 'https://harounbakhouche.vercel.app/'
   },
   {
     imgSrc: '/images/projects/scrimba.png',
     title: 'Certification Scrimba',
     tags: ['Online Course', 'React'],
-    projectLink: ''
+    projectLink: 'https://drive.google.com/file/d/1kKBFY0G7cYrdXDJmhFpCSszfdOLfHT9x/view?usp=sharing'
   },
 ];
 
