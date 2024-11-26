@@ -39,7 +39,7 @@ const works = [
     imgSrc: '/images/projects/portfolio.png',
     title: 'Portfolio',
     tags: ['React', 'Tailwind'],
-    projectLink: 'https://harounbakhouche.vercel.app/'
+    projectLink: 'https://github.com/BaKouN/portfolio-react'
   },
   {
     imgSrc: '/images/projects/scrimba.png',
