@@ -3,6 +3,10 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
+import React from 'react'
 
 /**
  * Components
@@ -96,7 +100,8 @@ const Footer = () => {
                     <a
                       href={href}
                       target="_blank"
-                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                      rel="noreferrer"
+                      className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up" 
                     >
                       {label}
                     </a>

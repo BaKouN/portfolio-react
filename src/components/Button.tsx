@@ -3,9 +3,12 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
 import React from 'react'
 
-interface Button {
+interface ButtonProps {
   label: string,
   href?: string,
   target?: string,
@@ -24,7 +27,7 @@ const ButtonPrimary = ({
   target = '_self',
   icon,
   classes
-}: Button) => {
+}: ButtonProps) => {
   if (href) {
     return (
       <a
@@ -69,7 +72,7 @@ const ButtonOutline = ({
   label,
   icon,
   classes
-}: Button) => {
+}: ButtonProps) => {
   if (href) {
     return (
       <a

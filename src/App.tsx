@@ -6,12 +6,12 @@
 /**
  * Node modules
  */
+import React from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
-// TODO: Understand why the types don't work here.
-// @ts-ignore 
+// @ts-expect-error lenis/react type definition exist but doesn't seem to link
 import { ReactLenis } from 'lenis/react';
 
 /**

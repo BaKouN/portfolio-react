@@ -3,6 +3,10 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
+import React from 'react'
 
 const socialLinks = [
   {
@@ -44,7 +48,7 @@ const Contact = () => {
           </h2>
 
           <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
-            Contactez-moi dès aujourd'hui pour discuter de vos besoins et commencer à transformer votre vision en réalité !
+            Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et commencer à transformer votre vision en réalité !
           </p>
 
           <div className="flex items-center gap-2 mt-auto">
@@ -53,7 +57,8 @@ const Contact = () => {
                 key={key}
                 href={href}
                 target="_blank"
-                className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up"
+                rel="noreferrer"
+                className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-50/80 reveal-up" 
               >
                 {icon}
               </a>

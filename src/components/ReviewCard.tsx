@@ -3,9 +3,10 @@
  * @license Apache-2.0
  */
 
-
-import PropTypes from 'prop-types';
-
+/**
+ * Node modules
+ */
+import React from 'react'
 
 const ratings = new Array(5);
 ratings.fill({
@@ -13,13 +14,20 @@ ratings.fill({
   style: { fontVariationSettings: '"FILL" 1' }
 });
 
+interface ReviewCardProps {
+  content: string,
+  imgSrc: string,
+  name: string,
+  company: string,
+}
+
 
 const ReviewCard = ({
   content,
   imgSrc,
   name,
   company
-}) => {
+}: ReviewCardProps) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
 
@@ -63,13 +71,5 @@ const ReviewCard = ({
     </div>
   )
 }
-
-ReviewCard.propTypes = {
-  content: PropTypes.string.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired
-}
-
 
 export default ReviewCard
