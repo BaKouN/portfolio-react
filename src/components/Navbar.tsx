@@ -1,24 +1,15 @@
-// eslint-disable-next-line
-// @ts-nocheck
+import React, { useState, useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-// TODO: Rework this file !Important
 
-/**
- * @Copyright 2024 haroun.b
- * @license Apache-2.0
- */
+gsap.registerPlugin(useGSAP,ScrollTrigger, ScrollToPlugin);
 
-/**
- * Node modules
- */
-import React, { useState, useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const Navbar = ({ navOpen }: { navOpen: bool }) => {
+const Navbar = ({ navOpen }: { navOpen: boolean }) => {
   const [activeLink, setActiveLink] = useState("#home");
+  const ignoreScrollTrigger = useRef(false);
 
   const navItems = [
     { id: "#home", label: "Accueil" },
@@ -28,37 +19,56 @@ const Navbar = ({ navOpen }: { navOpen: bool }) => {
     { id: "#contact", label: "Contact" },
   ];
 
-  useEffect(() => {
-    // Create ScrollTrigger instances for each section
-    navItems.forEach((section) => {
+  useGSAP(() => {
+    navItems.map((section) =>
       ScrollTrigger.create({
         trigger: section.id,
-        start: "top center", // Start when the section top hits the center of the viewport
-        onEnter: () => setActiveLink(section.id),
-        onEnterBack: () => setActiveLink(section.id),
-      });
-    });
+        start: "top 10%",
+        end: "bottom 50%",
+        scrub:true,
+        markers: true,
+        onEnter: () => {
+          if (!ignoreScrollTrigger.current) {
+            setActiveLink(section.id);
+          }
+        },
+        onEnterBack: () => {
+          if (!ignoreScrollTrigger.current) {
+            setActiveLink(section.id);
+          }
+        },
+      })
+    );
 
-    // Cleanup ScrollTriggers on component unmount
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
-  function handleClick(e, id) {
-    setActiveLink(id)
+  const handleNavClick = (id: string) => {
+    setActiveLink(id);
+    ignoreScrollTrigger.current = true;
 
-    gsap.to(window, { duration: 2, scrollTo: id })
-  }
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: id,
+      onComplete: () => {
+        setTimeout(() => (ignoreScrollTrigger.current = false), 200);
+      },
+    });
+  };
 
   return (
-    <nav className={"navbar " + (navOpen ? "active" : "")}>
+    <nav className={`navbar ${navOpen ? "active" : ""}`}>
       {navItems.map(({ id, label }) => (
-        <button
+        <a
+          href={id}
           key={id}
-          className={activeLink === id ? "nav-link active" : "nav-link"}
-          onClick={(e) => handleClick(e, id)}
+          className={`nav-link ${activeLink === id ? "active" : ""}`}
+          onClick={(e) => {
+            e.preventDefault();
+            handleNavClick(id);
+          }}
         >
           {label}
-        </button>
+        </a>
       ))}
     </nav>
   );
