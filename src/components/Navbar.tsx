@@ -1,14 +1,26 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+// eslint-disable-next-line
+// @ts-nocheck
+
+// TODO: Rework this file !Important
+
+/**
+ * @Copyright 2024 haroun.b
+ * @license Apache-2.0
+ */
+
+/**
+ * Node modules
+ */
+import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen }: { navOpen: bool }) => {
   const [activeLink, setActiveLink] = useState("#home");
 
-  const sections = [
+  const navItems = [
     { id: "#home", label: "Accueil" },
     { id: "#about", label: "À propos" },
     { id: "#work", label: "Projets" },
@@ -18,11 +30,10 @@ const Navbar = ({ navOpen }) => {
 
   useEffect(() => {
     // Create ScrollTrigger instances for each section
-    sections.forEach((section) => {
+    navItems.forEach((section) => {
       ScrollTrigger.create({
         trigger: section.id,
         start: "top center", // Start when the section top hits the center of the viewport
-        end: "bottom center", // End when the section bottom hits the center
         onEnter: () => setActiveLink(section.id),
         onEnterBack: () => setActiveLink(section.id),
       });
@@ -32,54 +43,25 @@ const Navbar = ({ navOpen }) => {
     return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   }, []);
 
-  const handleScroll = (e, id) => {
-    e.preventDefault();
-    setActiveLink(id);
+  function handleClick(e, id) {
+    setActiveLink(id)
 
-    // Smooth scroll to the section using GSAP
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: id, offsetY: 50 }, // Adjust offsetY if you have a fixed navbar
-    });
-  };
+    gsap.to(window, { duration: 2, scrollTo: id })
+  }
 
   return (
-    <>
-      <nav className={"navbar " + (navOpen ? "active" : "")}>
-        {sections.map(({ id, label }) => (
-          <a
-            href={id}
-            key={id}
-            className={`nav-link ${activeLink === id ? "active" : ""}`}
-            onClick={(e) => handleScroll(e, id)}
-          >
-            {label}
-          </a>
-        ))}
-      </nav>
-
-      {/* Example sections */}
-      <div id="home" style={{ height: "100vh", background: "#f0f0f0" }}>
-        <h1>Accueil</h1>
-      </div>
-      <div id="about" style={{ height: "100vh", background: "#e0e0e0" }}>
-        <h1>À propos</h1>
-      </div>
-      <div id="work" style={{ height: "100vh", background: "#d0d0d0" }}>
-        <h1>Projets</h1>
-      </div>
-      <div id="reviews" style={{ height: "100vh", background: "#c0c0c0" }}>
-        <h1>Retours</h1>
-      </div>
-      <div id="contact" style={{ height: "100vh", background: "#b0b0b0" }}>
-        <h1>Contact</h1>
-      </div>
-    </>
+    <nav className={"navbar " + (navOpen ? "active" : "")}>
+      {navItems.map(({ id, label }) => (
+        <button
+          key={id}
+          className={activeLink === id ? "nav-link active" : "nav-link"}
+          onClick={(e) => handleClick(e, id)}
+        >
+          {label}
+        </button>
+      ))}
+    </nav>
   );
-};
-
-Navbar.propTypes = {
-  navOpen: PropTypes.bool.isRequired,
 };
 
 export default Navbar;

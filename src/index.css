@@ -101,13 +101,8 @@ body {
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply text-zinc-900 bg-zinc-50 rounded-lg duration-500
 }
-
-.navbar .active-box {
-  @apply absolute bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500
-}
-
 
 /* Button */
 
