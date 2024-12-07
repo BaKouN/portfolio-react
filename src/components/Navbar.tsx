@@ -25,8 +25,6 @@ const Navbar = ({ navOpen }: { navOpen: boolean }) => {
         trigger: section.id,
         start: "top 10%",
         end: "bottom 50%",
-        scrub:true,
-        markers: true,
         onEnter: () => {
           if (!ignoreScrollTrigger.current) {
             setActiveLink(section.id);
@@ -43,8 +41,8 @@ const Navbar = ({ navOpen }: { navOpen: boolean }) => {
   }, []);
 
   const handleNavClick = (id: string) => {
-    setActiveLink(id);
     ignoreScrollTrigger.current = true;
+    setActiveLink(id);
 
     gsap.to(window, {
       duration: 1,
