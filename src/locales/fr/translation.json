@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "availability": "Disponible maintenant",
+    "title": "Haroun Bakhouche. Développeur, Designer, Passioné.",
+    "downloadCV": "Télécharger CV",
+    "scroll": "Scroll"
+  },
+  "work": {
+    "title": "Mes projets pro/perso",
+    "tags": {
+      "frontend": "Frontend",
+      "years": "2+ years",
+      "cicd": "CI/CD",
+      "api": "API",
+      "spa": "SPA",
+      "maps": "Maps",
+      "gsap": "GSAP",
+      "creativeDev": "Creative Dev",
+      "php": "PHP",
+      "mvc": "MVC",
+      "studentProject": "Projet Etudiant",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "onlineCourse": "Online Course"
+    }
+  },
+  "footer": {
+    "ambitiousProject": "Un projet ambitieux en tête ?",
+    "letsDiscuss": "Parlons-en",
+    "sitemap": "Sitemap",
+    "socials": "Socials",
+    "copyright": "© 2024 haroun.b avec l'aide de @codewithsadee"
+  },
+  "contact": {
+    "title": "Contactez-moi pour une collaboration",
+    "description": "Contactez-moi dès aujourd'hui pour discuter de vos besoins et commencer à transformer votre vision en réalité !",
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "send": "Envoyer"
+    }
+  },
+  "reviews": {
+    "title": "Ils parlent de moi",
+    "review-1": "Sa capacité à gérer des détails importants tout en respectant les délais est impressionnante. Une ressource de confiance.", 
+    "review-2": "Haroun est un excellent développeur qui m'a démontré ses capacités d'apprentissage et d'adaptation au cours de sa mission chez Michelin.", 
+    "review-3": "Haroun a une capacité remarquable à trouver des solutions pragmatiques aux problèmes qu'il rencontre.", 
+    "review-4": "C'était un collègue sur qui je pouvais compter, même dans les situations les plus stressantes.", 
+    "review-5": "Haroun a démontré une adaptabilité incroyable, prenant rapidement ses marques dans un environnement exigeant et haut de gamme."
+  },
+  "about": {
+    "description": "Bienvenue, je suis Haroun, développeur Front-End passionné. J'adore transformer des visions en réalités numériques, en créant des expériences web intuitives et performantes grâce à React, JavaScript et des technologies modernes.",
+    "yearsOfPassion": "Années de passion",
+    "yearsOfExperience": "Années d'XP pro"
+  },
+  "skills": {
+    "title": "Outils essentiels que j'utilise",
+    "description": "Découvrez les outils et technologies que j'utilise pour créer des sites web et des applications exceptionnelles et performantes.",
+    "categories": {
+      "designTool": "Outil de design",
+      "interaction": "Interaction",
+      "framework": "Framework",
+      "userInterface": "Interface utilisateur",
+      "webServer": "Serveur web",
+      "nodeFramework": "Framework Node",
+      "database": "Base de données"
+    }
+  },
+  "header": {
+    "contact": "Me Contacter"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "reviews": "Retours",
+    "contact": "Contact"
+  }
+}

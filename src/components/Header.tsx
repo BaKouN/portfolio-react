@@ -8,6 +8,7 @@
  * Node modules
  */
 import React, { useState } from "react";
+// import { useTranslation } from 'react-i18next';
 
 
 /**
@@ -18,6 +19,12 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  // const { i18n } = useTranslation();
+
+  // const handleLanguageChange = (lng: string) => {
+  //   i18n.changeLanguage(lng); // Changes the language globally
+  // };
 
   return (
     <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">

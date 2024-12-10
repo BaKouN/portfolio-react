@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "availability": "Available now",
+    "title": "Haroun Bakhouche. Developer, Designer, Passionate.",
+    "downloadCV": "Download CV",
+    "scroll": "Scroll"
+  },
+  "work": {
+    "title": "My professional/personal projects",
+    "tags": {
+      "frontend": "Frontend",
+      "years": "2+ years",
+      "cicd": "CI/CD",
+      "api": "API",
+      "spa": "SPA",
+      "maps": "Maps",
+      "gsap": "GSAP",
+      "creativeDev": "Creative Dev",
+      "php": "PHP",
+      "mvc": "MVC",
+      "studentProject": "Student Project",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "onlineCourse": "Online Course"
+    }
+  },
+  "footer": {
+    "ambitiousProject": "Have an ambitious project in mind?",
+    "letsDiscuss": "Let's discuss it",
+    "sitemap": "Sitemap",
+    "socials": "Socials",
+    "copyright": "© 2024 haroun.b with the help of @codewithsadee"
+  },
+  "contact": {
+    "title": "Contact me for collaboration",
+    "description": "Contact me today to discuss your needs and start turning your vision into reality!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "reviews": {
+    "title": "What they say about me",
+    "review-1": "His ability to manage important details while meeting deadlines is impressive. A trusted resource.", 
+    "review-2": "Haroun is an excellent developer who demonstrated his learning and adaptation skills during his assignment at Michelin.", 
+    "review-3": "Haroun has a remarkable ability to find pragmatic solutions to the problems he encounters.", 
+    "review-4": "He was a colleague I could count on, even in the most stressful situations.", 
+    "review-5": "Haroun demonstrated incredible adaptability, quickly finding his footing in a demanding and high-end environment."
+  },
+  "about": {
+    "description": "Welcome, I'm Haroun, a passionate Front-End developer. I love turning visions into digital realities, creating intuitive and high-performance web experiences using React, JavaScript, and modern technologies.",
+    "yearsOfPassion": "Years of passion",
+    "yearsOfExperience": "Years of pro experience"
+  },
+  "skills": {
+    "title": "Essential tools I use",
+    "description": "Discover the tools and technologies I use to create exceptional and high-performance websites and applications.",
+    "categories": {
+      "designTool": "Design tool",
+      "interaction": "Interaction",
+      "framework": "Framework",
+      "userInterface": "User interface",
+      "webServer": "Web server",
+      "nodeFramework": "Node framework",
+      "database": "Database"
+    }
+  },
+  "header": {
+    "contact": "Contact Me"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  }
+}
