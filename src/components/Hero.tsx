@@ -7,6 +7,7 @@
  * Node modules
  */
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 /**
  * Components
@@ -15,6 +16,8 @@ import { ButtonPrimary, ButtonOutline } from "./Button";
 
 
 const Hero = () => {
+  const { t } = useTranslation()
+
   return (
     <section
       id="home"
@@ -39,17 +42,17 @@ const Hero = () => {
                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping"></span>
               </span>
 
-              Disponible maintenant
+              {t('hero.availability')}
             </div>
           </div>
 
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-            Haroun Bakhouche. Développeur, Designer, Passioné.
+            {t('hero.title')}
           </h2>
 
           <div className="flex items-center gap-3">
             <ButtonPrimary
-              label="Télécharger CV"
+              label={t('hero.downloadCV')}
               icon="download"
               href="https://drive.google.com/file/d/1GyrSOH-P3ZbItuYxoZIxwUGJ1B-QH10q/view?usp=sharing"
               target="_blank"
@@ -57,7 +60,7 @@ const Hero = () => {
 
             <ButtonOutline
               href="#about"
-              label="Scroll"
+              label={t('hero.scroll')}
               icon="arrow_downward"
             />
           </div>

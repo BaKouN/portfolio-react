@@ -23,36 +23,37 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
  * Components
  */
 import ReviewCard from "./ReviewCard";
+import { useTranslation } from 'react-i18next';
 
-
+// ASK MENTOR: Is there a better way to sync ID with translation from a local dataset ?
 const reviews = [
   {
-    content: 'Sa capacité à gérer des détails importants tout en respectant les délais est impressionnante. Une ressource de confiance.',
+    id: 'review-1',
     name: 'Farah Bakhouche',
     imgSrc: '/images/people/farah-bak.jpeg',
     company: 'PDG @Maevic France'
   },
   {
-    content: "Haroun est un excellent développeur qui m'a démontré ses capacités d'apprentissage et d'adaptation au cours de sa mission chez Michelin.",
+    id: 'review-2',
     name: 'Jonathan Garijo',
     imgSrc: '/images/people/jo-garijo.jpeg',
     company: 'Lead Dev @Michelin Digital'
   },
   {
-    content: "Haroun a une capacité remarquable à trouver des solutions pragmatiques aux problèmes qu'il rencontre.",
+    id: 'review-3',
     name: 'Joris Gundermann',
     imgSrc: '/images/people/joris-gundermann.jpeg',
     company: 'Dev Manager @SeLoger'
   },
   {
-    content: 'C’était un collègue sur qui je pouvais compter, même dans les situations les plus stressantes.',
+    id: 'review-4',
     name: 'Tori',
     imgSrc: '/images/people/tori.png',
     company: 'Manager @Old Loves'
   },
   {
-    content: 'Haroun a démontré une adaptabilité incroyable, prenant rapidement ses marques dans un environnement exigeant et haut de gamme.',
-    name: 'Swan ',
+    id: 'review-5',
+    name: 'Swan',
     imgSrc: '/images/people/swanny.jpeg',
     company: 'CEO @Huelo bar'
   },
@@ -60,6 +61,7 @@ const reviews = [
 
 
 const Review = () => {
+  const { t } = useTranslation()
 
   useGSAP(() => {
     gsap.to('.scrub-slide', {
@@ -85,13 +87,13 @@ const Review = () => {
         </h2>
 
         <div className="scrub-slide flex items-stretch gap-3 w-fit">
-          {reviews.map(({ content, name, imgSrc, company }, key) => (
+          {reviews.map(({ id, name, imgSrc, company }) => (
             <ReviewCard
-              key={key}
+              key={id}
               name={name}
               imgSrc={imgSrc}
               company={company}
-              content={content}
+              content={ t(`reviews.${id}`)}
             />
           ))}
         </div>
