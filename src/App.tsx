@@ -3,39 +3,39 @@
  * @license Apache-2.0
  */
 
-
 /**
  * Node modules
  */
-import { ReactLenis } from 'lenis/react';
+import React from 'react'
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from '@gsap/react';
 
+// @ts-expect-error lenis/react type definition exist but doesn't seem to link
+import { ReactLenis } from 'lenis/react';
 
 /**
  * Register gsap plugins
  */
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-
 /**
  * Components
  */
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skill from "./components/Skill";
-import Work from "./components/Work";
-import Review from "./components/Review";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Header from '@components/Header';
+import Hero from '@components/Hero';
+import About from '@components/About';
+import Skill from '@components/Skill';
+import Work from '@components/Work';
+import Review from '@components/Review';
+import Contact from "@components/Contact"
+import Footer from "@components/Footer";
 
 
 const App = () => {
 
   useGSAP(() => {
-    const elements = gsap.utils.toArray('.reveal-up');
+    const elements = gsap.utils.toArray<HTMLElement>('.reveal-up');
 
     elements.forEach((element) => {
       gsap.to(element, {
@@ -69,6 +69,5 @@ const App = () => {
   )
 
 }
-
 
 export default App;

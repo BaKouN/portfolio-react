@@ -3,6 +3,10 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
+import React from 'react'
 
 const aboutItems = [
   {

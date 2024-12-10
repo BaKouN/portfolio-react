@@ -3,11 +3,18 @@
  * @license Apache-2.0
  */
 
-
 /**
  * Node modules
  */
-import PropTypes from 'prop-types';
+import React from 'react'
+
+interface ButtonProps {
+  label: string,
+  href?: string,
+  target?: string,
+  icon?: string,
+  classes?: string,
+}
 
 
 /**
@@ -15,12 +22,12 @@ import PropTypes from 'prop-types';
  */
 
 const ButtonPrimary = ({
+  label,
   href,
   target = '_self',
-  label,
   icon,
   classes
-}) => {
+}: ButtonProps) => {
   if (href) {
     return (
       <a
@@ -54,14 +61,6 @@ const ButtonPrimary = ({
   }
 }
 
-ButtonPrimary.propTypes = {
-  label: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  target: PropTypes.string,
-  icon: PropTypes.string,
-  classes: PropTypes.string
-}
-
 
 /**
  * Outline Button
@@ -73,7 +72,7 @@ const ButtonOutline = ({
   label,
   icon,
   classes
-}) => {
+}: ButtonProps) => {
   if (href) {
     return (
       <a
@@ -105,14 +104,6 @@ const ButtonOutline = ({
       </button>
     )
   }
-}
-
-ButtonOutline.propTypes = {
-  label: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  target: PropTypes.string,
-  icon: PropTypes.string,
-  classes: PropTypes.string
 }
 
 export {
