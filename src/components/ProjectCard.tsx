@@ -7,7 +7,15 @@
 /**
  * Node modules
  */
-import PropTypes from 'prop-types';
+import React from 'react'
+
+interface ProjectCardProps {
+  imgSrc: string,
+  title: string,
+  tags: string[],
+  projectLink?: string,
+  classes?: string
+}
 
 
 const ProjectCard = ({
@@ -16,7 +24,7 @@ const ProjectCard = ({
   tags,
   projectLink,
   classes
-}) => {
+}: ProjectCardProps) => {
   return (
     <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors " + classes}>
 
@@ -62,19 +70,12 @@ const ProjectCard = ({
       <a
         href={projectLink}
         target='_blank'
-        className="absolute inset-0"
+        rel="noreferrer"
+        className="absolute inset-0" 
       ></a>
 
     </div>
   )
-}
-
-ProjectCard.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
-  projectLink: PropTypes.string,
-  classes: PropTypes.string
 }
 
 export default ProjectCard

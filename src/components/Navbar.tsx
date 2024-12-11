@@ -1,13 +1,17 @@
+// eslint-disable-next-line
+// @ts-nocheck
+
+// TODO: Rework this file !Important
+
 /**
  * @Copyright 2024 haroun.b
  * @license Apache-2.0
  */
 
-
 /**
  * Node modules
  */
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 
 

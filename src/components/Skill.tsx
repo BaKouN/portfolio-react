@@ -3,6 +3,10 @@
  * @license Apache-2.0
  */
 
+/**
+ * Node modules
+ */
+import React from 'react'
 
 /**
  * Components
@@ -60,11 +64,11 @@ const Skill = () => {
       <div className="container">
 
         <h2 className="headline-2 reveal-up">
-          Outils essentiels que j'utilise
+          Outils essentiels que j&apos;utilise
         </h2>
 
         <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-          Découvrez les outils et technologies que j'utilise pour créer des sites web et des applications exceptionnelles et performantes.
+          Découvrez les outils et technologies que j&apos;utilise pour créer des sites web et des applications exceptionnelles et performantes.
         </p>
 
         <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
