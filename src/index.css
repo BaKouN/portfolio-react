@@ -8,10 +8,6 @@
  * BASE
 \* ---------------------------------- */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   @apply bg-zinc-900 text-zinc-50
 }
@@ -26,6 +22,7 @@ body {
 .headline-2 {
   @apply max-w-max;
   background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -97,17 +94,12 @@ body {
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide rounded-lg text-zinc-50/50 hover:text-zinc-50 transition-colors
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply text-zinc-900 bg-zinc-50 duration-500
 }
-
-.navbar .active-box {
-  @apply absolute bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500
-}
-
 
 /* Button */
 
