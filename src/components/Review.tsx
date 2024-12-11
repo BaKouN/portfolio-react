@@ -83,7 +83,7 @@ const Review = () => {
       <div className="container">
 
         <h2 className="headline-2 mb-8 reveal-up">
-          Ils parlent de moi
+          {t('reviews.title')}
         </h2>
 
         <div className="scrub-slide flex items-stretch gap-3 w-fit">

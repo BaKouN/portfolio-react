@@ -1,12 +1,13 @@
 {
   "hero": {
     "availability": "Available now",
-    "title": "Haroun Bakhouche. Developer, Designer, Passionate.",
+    "title": "Haroun Bakhouche.<1/> Developer,<1/> Designer,<1/> Explorer.",
     "downloadCV": "Download CV",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "resumeLink": "https://drive.google.com/file/d/1qNZBzMXu2B_6LPKmMmliH_VFPRMyX-CB/view?usp=sharing"
   },
   "work": {
-    "title": "My professional/personal projects",
+    "title": "Projects",
     "tags": {
       "frontend": "Frontend",
       "years": "2+ years",
@@ -29,7 +30,14 @@
     "letsDiscuss": "Let's discuss it",
     "sitemap": "Sitemap",
     "socials": "Socials",
-    "copyright": "© 2024 haroun.b with the help of @codewithsadee"
+    "copyright": "© 2024 haroun.b with the help of @codewithsadee",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "work": "Work",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    }
   },
   "contact": {
     "title": "Contact me for collaboration",
@@ -50,9 +58,9 @@
     "review-5": "Haroun demonstrated incredible adaptability, quickly finding his footing in a demanding and high-end environment."
   },
   "about": {
-    "description": "Welcome, I'm Haroun, a passionate Front-End developer. I love turning visions into digital realities, creating intuitive and high-performance web experiences using React, JavaScript, and modern technologies.",
-    "yearsOfPassion": "Years of passion",
-    "yearsOfExperience": "Years of pro experience"
+    "description": "Welcome, I’m Haroun, a passionate Front-End Developer. I specialize in turning creative visions into digital realities, building intuitive and high-performance web experiences with React, JavaScript, and modern tools.",
+    "about-1": "Years of passion",
+    "about-2": "Years of pro experience"
   },
   "skills": {
     "title": "Essential tools I use",

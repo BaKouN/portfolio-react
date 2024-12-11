@@ -12,6 +12,7 @@ import React from 'react'
  * Components
  */
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from 'react-i18next';
 
 
 const works = [
@@ -55,6 +56,8 @@ const works = [
 
 
 const Work = () => {
+  const { t } = useTranslation()
+
   return (
     <section
       id="work"
@@ -63,7 +66,7 @@ const Work = () => {
       <div className="container">
 
         <h2 className="headline-2 mb-8 reveal-up">
-          Mes projets pro/perso
+          { t('work.title') }
         </h2>
 
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">

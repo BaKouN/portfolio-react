@@ -1,9 +1,10 @@
 {
   "hero": {
     "availability": "Disponible maintenant",
-    "title": "Haroun Bakhouche. Développeur, Designer, Passioné.",
+    "title": "Haroun Bakhouche.<1/> Développeur,<1/> Designer,<1/> Passioné.",
     "downloadCV": "Télécharger CV",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "resumeLink": "https://drive.google.com/file/d/1kR1THUEU1FPipNfT7wYr0t6bV8z6e_sR/view?usp=sharing"
   },
   "work": {
     "title": "Mes projets pro/perso",
@@ -28,8 +29,15 @@
     "ambitiousProject": "Un projet ambitieux en tête ?",
     "letsDiscuss": "Parlons-en",
     "sitemap": "Sitemap",
-    "socials": "Socials",
-    "copyright": "© 2024 haroun.b avec l'aide de @codewithsadee"
+    "socials": "Réseaux Sociaux",
+    "copyright": "© 2024 haroun.b avec l'aide de @codewithsadee",
+    "links": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "reviews": "Retours",
+      "contact": "Contact"
+    }
   },
   "contact": {
     "title": "Contactez-moi pour une collaboration",
@@ -51,8 +59,8 @@
   },
   "about": {
     "description": "Bienvenue, je suis Haroun, développeur Front-End passionné. J'adore transformer des visions en réalités numériques, en créant des expériences web intuitives et performantes grâce à React, JavaScript et des technologies modernes.",
-    "yearsOfPassion": "Années de passion",
-    "yearsOfExperience": "Années d'XP pro"
+    "about-1": "Années de passion",
+    "about-2": "Années d'XP pro"
   },
   "skills": {
     "title": "Outils essentiels que j'utilise",

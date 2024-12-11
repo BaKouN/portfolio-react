@@ -7,7 +7,7 @@
  * Node modules
  */
 import React from 'react'
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 /**
  * Components
@@ -47,14 +47,16 @@ const Hero = () => {
           </div>
 
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-            {t('hero.title')}
+            <Trans i18nKey={'hero.title'} components={{ 1: <br /> }}>
+            </Trans>
+
           </h2>
 
           <div className="flex items-center gap-3">
             <ButtonPrimary
               label={t('hero.downloadCV')}
               icon="download"
-              href="https://drive.google.com/file/d/1GyrSOH-P3ZbItuYxoZIxwUGJ1B-QH10q/view?usp=sharing"
+              href={t('hero.resumeLink')}
               target="_blank"
             />
 

@@ -7,6 +7,7 @@
  * Node modules
  */
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 /**
  * Components
@@ -15,23 +16,23 @@ import { ButtonPrimary } from "./Button";
 
 const sitemap = [
   {
-    label: 'Accueil',
+    label: 'home',
     href: '#home'
   },
   {
-    label: 'À propos',
+    label: 'about',
     href: '#about'
   },
   {
-    label: 'Projets',
+    label: 'work',
     href: '#work'
   },
   {
-    label: 'Retours',
+    label: 'reviews',
     href: '#reviews'
   },
   {
-    label: 'Contact',
+    label: 'contact',
     href: '#contact'
   }
 ];
@@ -53,6 +54,8 @@ const socials = [
 
 
 const Footer = () => {
+  const { t } = useTranslation() 
+
   return (
     <footer className="section">
       <div className="container">
@@ -61,12 +64,12 @@ const Footer = () => {
 
           <div className="mb-10">
             <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
-              Un projet ambitieux en tête ?
+              { t('footer.ambitiousProject') }
             </h2>
 
             <ButtonPrimary
               href="mailto:haroun.bakhouche.hb@gmail.com"
-              label="Parlons-en"
+              label={ t('footer.letsDiscuss') }
               icon="chevron_right"
               classes="reveal-up"
             />
@@ -75,7 +78,9 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-4 lg:pl-20">
 
             <div>
-              <p className="mb-2 reveal-up">Sitemap</p>
+              <p className="mb-2 reveal-up">
+                { t('footer.sitemap') }
+              </p>
 
               <ul>
                 {sitemap.map(({ label, href }, key) => (
@@ -84,7 +89,7 @@ const Footer = () => {
                       href={href}
                       className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
                     >
-                      {label}
+                      {t(`footer.links.${label}`)}
                     </a>
                   </li>
                 ))}
@@ -92,7 +97,9 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="mb-2 reveal-up">Socials</p>
+              <p className="mb-2 reveal-up">
+              { t('footer.socials') }
+              </p>
 
               <ul>
                 {socials.map(({ label, href }, key) => (
@@ -127,8 +134,8 @@ const Footer = () => {
             />
           </a>
 
-          <p className="text-zinc-500 text-sm reveal-up">
-            &copy; 2024 <span className="text-zinc-200">haroun.b with the help of <a href="https://github.com/codewithsadee">@codewithsadee</a></span>
+          <p className="text-zinc-500 text-sm reveal-up max-w-[80%]">
+            &copy; 2024 <span className="text-zinc-200">{ t('footer.copyright') }</span>
           </p>
         </div>
 

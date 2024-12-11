@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { useTranslation } from "react-i18next";
 
 
 gsap.registerPlugin(useGSAP,ScrollTrigger, ScrollToPlugin);
@@ -11,12 +12,14 @@ const Navbar = ({ navOpen }: { navOpen: boolean }) => {
   const [activeLink, setActiveLink] = useState("#home");
   const ignoreScrollTrigger = useRef(false);
 
+  const { t } = useTranslation()
+
   const navItems = [
-    { id: "#home", label: "Accueil" },
-    { id: "#about", label: "À propos" },
-    { id: "#work", label: "Projets" },
-    { id: "#reviews", label: "Retours" },
-    { id: "#contact", label: "Contact" },
+    { id: "#home", label: "home" },
+    { id: "#about", label: "about" },
+    { id: "#work", label: "projects" },
+    { id: "#reviews", label: "reviews" },
+    { id: "#contact", label: "contact" },
   ];
 
   useGSAP(() => {
@@ -65,7 +68,7 @@ const Navbar = ({ navOpen }: { navOpen: boolean }) => {
             handleNavClick(id);
           }}
         >
-          {label}
+          {t(`nav.${label}`)}
         </a>
       ))}
     </nav>
