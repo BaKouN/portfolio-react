@@ -12,63 +12,66 @@ import React from 'react'
  * Components
  */
 import SkillCard from "./SkillCard";
+import { useTranslation } from 'react-i18next';
 
 
 const skillItem = [
   {
     imgSrc: '/images/tools/figma.svg',
     label: 'Figma',
-    desc: 'Outil de design'
+    desc: 'designTool'
   },
   {
     imgSrc: '/images/tools/javascript.svg',
     label: 'JavaScript',
-    desc: 'Interaction'
+    desc: 'interaction'
   },
   {
     imgSrc: '/images/tools/react.svg',
     label: 'React',
-    desc: 'Framework'
+    desc: 'framework'
   },
   {
     imgSrc: '/images/tools/css3.svg',
     label: 'CSS',
-    desc: 'Interface utilisateur'
+    desc: 'userInterface'
   },
   {
     imgSrc: '/images/tools/tailwindcss.svg',
     label: 'TailwindCSS',
-    desc: 'Interface utilisateur'
+    desc: 'userInterface'
   },
   {
     imgSrc: '/images/tools/nodejs.svg',
     label: 'NodeJS',
-    desc: 'Serveur web'
+    desc: 'webServer'
   },
   {
     imgSrc: '/images/tools/nestjs.svg',
     label: 'NestJS',
-    desc: 'Framework Node'
+    desc: 'nodeFramework'
   },
   {
     imgSrc: '/images/tools/mongodb.svg',
     label: 'MongoDB',
-    desc: 'Base de données'
+    desc: 'database'
   },
 ];
 
 
 const Skill = () => {
+  const { t } = useTranslation()
+
   return (
     <section className="section">
       <div className="container">
 
         <h2 className="headline-2 reveal-up">
-          Outils essentiels que j&apos;utilise
+          { t('skills.title')}
         </h2>
 
         <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
-          Découvrez les outils et technologies que j&apos;utilise pour créer des sites web et des applications exceptionnelles et performantes.
+          { t('skills.description')}
         </p>
 
         <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))]">
@@ -78,7 +81,7 @@ const Skill = () => {
                 key={key}
                 imgSrc={imgSrc}
                 label={label}
-                desc={desc}
+                desc={ t(`skills.categories.${desc}`)}
                 classes="reveal-up"
               />
             ))

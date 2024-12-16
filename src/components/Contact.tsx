@@ -7,6 +7,7 @@
  * Node modules
  */
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const socialLinks = [
   {
@@ -34,6 +35,8 @@ const socialLinks = [
 
 
 const Contact = () => {
+  const { t } = useTranslation()
+  
   return (
     <section
       id="contact"
@@ -44,11 +47,11 @@ const Contact = () => {
         <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
 
         <h2 className="headline-2 lg:max-w-[12ch] reveal-up">
-            Contactez-moi pour une collaboration
+            { t('contact.title') }
           </h2>
 
           <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
-            Contactez-moi dès aujourd&apos;hui pour discuter de vos besoins et commencer à transformer votre vision en réalité !
+          { t('contact.description') }
           </p>
 
           <div className="flex items-center gap-2 mt-auto">
@@ -79,7 +82,7 @@ const Contact = () => {
                 htmlFor="name"
                 className="label reveal-up"
               >
-                Nom
+                { t('contact.form.name') }
               </label>
 
               <input
@@ -98,7 +101,7 @@ const Contact = () => {
                 htmlFor="email"
                 className="label reveal-up"
               >
-                E-mail
+                { t('contact.form.email') }
               </label>
 
               <input
@@ -118,7 +121,7 @@ const Contact = () => {
               htmlFor="message"
               className="label reveal-up"
             >
-              Message
+              { t('contact.form.message') }
             </label>
 
             <textarea
@@ -134,7 +137,7 @@ const Contact = () => {
             type="submit"
             className="btn btn-primary [&]:max-w-full w-full justify-center reveal-up"
           >
-            Envoyer
+            { t('contact.form.send') }
           </button>
 
         </form>
